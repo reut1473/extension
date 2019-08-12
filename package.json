@@ -1,0 +1,82 @@
+{
+	"name": "reut",
+	"displayName": "reut",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.helloWorld",
+		"onCommand:extension.lab1",
+		"onCommand:extension.lab2",
+		"onCommand:extension.start",
+		"onView:validateMenu"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "package-explorer",
+					"title": "Package Explorer",
+					"icon": "/images-2.svg",
+					"command": "extension.start"
+				}
+			]
+		},
+		"views": {
+			"package-explorer": [
+				{
+					"id": "active-student",
+					"name": "active students"
+				  },
+				{
+					"id": "validateMenu",
+					"name": "tasks"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "extension.lab1",
+				"title": "lab1"
+			},
+			{
+				"command": "extension.lab2",
+				"title": "lab2"
+			}
+			,
+			{
+				"command": "extension.start",
+				"title": "start"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.36.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"@aspnet/signalr": "^1.1.4",
+		"request": "^2.88.0",
+		"vscode": "^1.1.35"
+	}
+}

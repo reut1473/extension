@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Coding</title>
+  </head>
+
+<body>
+<h1>hello to lab1</h1>
+<p id="bb" style="color: white" ></p>
+<script>
+window.addEventListener('message', event => {
+  var name=document.getElementById("bb");
+    const message = event.data;
+    name.textContent=message.name;
+    console.log(message.name);
+        
+})
+</script>
+</body>
+  </html>
